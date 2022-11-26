@@ -14,7 +14,7 @@
 @import url(//fonts.googleapis.com/css?family=Font+Name);
           */
 
-          /* @import '../node_modules/modern-normalize/modern-normalize.css';
+          /*@import '../node_modules/modern-normalize/modern-normalize.css';
           /* npm install modern-normalize 
             Resets elements for browser consistancy.  
             http://nicolasgallagher.com/about-normalize-css/ 
@@ -33,14 +33,23 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
   color:;
-  background-color:lightgrey;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color:;
+  font-family:;
   font-size:;
   margin:;
   padding:;
-  text-align: center;
 }
 
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {}
+nav a {}
 
 /*  ----- Page layout blocks -----  */
 header {}
@@ -71,58 +80,96 @@ h4 {}
 h5 {}
 h6 {}
 
-cite {}
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
 
-
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
 
 /*  ----- Table ----- */
-table {
-    text-align: center;
-    margin: auto;
-    border: 2px solid blue;
-}
-caption {
-    font-size: 1.5em;
-}
+table {}
+caption {}
 thead {}
-tbody {
-    border: 3px solid blue;}
+tbody {}
 tfoot {}
-tr {
-    border: 2px solid blue;
-}
-  tr:nth-child(even) {
-    background-color: antiquewhite;
-  }
-th {
-    border: 2px solid blue;
-    font-size: 1.35em;
-    font-weight: bold;
-}
-td {
-    font-size: 1.2em;
-    width: 300px;
-    text-align: center;
-}
-  td:nth-child(1) {
-    padding-left: 55px;
-  }
-  td:nth-child(2) {
-    padding-left: 120px;
-  }
+tr {}
+  tr:nth-child(even) {}
+th {}
+td {}
+  td:nth-child(1) {}
 colgroup {}
 data {}
 datalist {}
 
 
 /*  ----- Form ----- */
+form {}
+fieldset {}
+  legend {}
+label {}
+  button {}
+  input {}
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
 
-button {
-    font-size: larger;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
 
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
 
 @keyframes App-logo {}
 
