@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
-export const AddExercisePage = () => {
+export const CreateExercisePage = () => {
 
     const [name, setName]       = useState('');
     const [reps, setReps]       = useState('');
@@ -11,7 +11,7 @@ export const AddExercisePage = () => {
     
     const history = useHistory();
 
-    const addExercise = async () => {
+    const CreateExercise = async () => {
         const newExercise = { name, reps, weight, unit, date };
         const response = await fetch('/exercises', {
             method: 'post',
@@ -33,7 +33,12 @@ export const AddExercisePage = () => {
         <>
         <article>
             <h2>Add to the collection</h2>
-            <p>Paragraph about this page.</p>
+            <p>
+                Use this page to add an exercise to the collection. Provide the exercise
+                name, the number of reps performed, the weight used (can also be the number
+                of laps, etc), the unit of the weight used (lbs, kgs, laps, etc), and the 
+                date the exercise was performed.
+            </p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
                     <legend>Which exercise are you adding?</legend>
@@ -78,7 +83,7 @@ export const AddExercisePage = () => {
                     <label for="submit">
                     <button
                         type="submit"
-                        onClick={addExercise}
+                        onClick={CreateExercise}
                         id="submit"
                     >Add</button> to the collection</label>
                 </fieldset>
@@ -88,4 +93,4 @@ export const AddExercisePage = () => {
     );
 }
 
-export default AddExercisePage;
+export default CreateExercisePage;

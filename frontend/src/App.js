@@ -9,7 +9,7 @@ import './App.css';
 
 // Import Pages
 import HomePage from './pages/HomePage';
-import AddExercisePage from './pages/AddExercisePage';
+import CreateExercisePage from './pages/CreateExercisePage';
 import EditExercisePage from './pages/EditExercisePage';
 
 // Define the function that renders the content in routes using State.
@@ -33,8 +33,8 @@ function App() {
               <HomePage setExercise={setExercise} />
             </Route>
 
-            <Route path="/add-exercise">
-              <AddExercisePage />
+            <Route path="/create-exercise">
+              <CreateExercisePage />
             </Route>
             
             <Route path="/edit-exercise">
