@@ -37,11 +37,15 @@ export const EditExercisePage = ({ exercise }) => {
     return (
         <>
         <article>
-            <h2>Edit a exercise in the collection</h2>
-            <p>Paragraph about this page.</p>
+            <h2>Edit an exercise in the collection</h2>
+            <p>
+                Use this page to edit an existing exercise in the collection.
+                Make any necessary changes to the exercise and then click the "Save"
+                button to update the collection with the corrected entry.
+            </p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>Which exercise are you adding?</legend>
+                    <legend>Which exercise are you editing?</legend>
                     <label for="name">Exercise name</label>
                     <input
                         type="text"

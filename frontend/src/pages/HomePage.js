@@ -44,17 +44,20 @@ function HomePage({ setExercise }) {
 
     // DISPLAY the exercises
     return (
-        <>
+        <div>
             <article>
-                <h2>List of Exercises</h2>
-                <p>Paragraph about this page.</p>
+                <h2>Your List of Exercises</h2>
+                <p>
+                    This is the list of all the exercises you've recorded. You can
+                    enter new exercises and edit or delete existing exercises below.
+                </p>
                 <ExerciseList 
                     exercises={exercises} 
                     onEdit={onEditExercise} 
                     onDelete={onDeleteExercise} 
                 />
             </article>
-        </>
+        </div>
     );
 }
 

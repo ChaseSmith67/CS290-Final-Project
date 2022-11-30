@@ -43,7 +43,9 @@ function App() {
           </main>
 
           <footer>
-            <p>Copyright statement</p>
+            <p>
+              <cite>&copy; 2022 Chase Smith</cite>
+            </p>
           </footer>
 
       </Router>
