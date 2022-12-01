@@ -18,14 +18,14 @@ function HomePage({ setExercise }) {
     } 
     
 
-    // UPDATE a exercise
+    // UPDATE an exercise
     const onEditExercise = async exercise => {
         setExercise(exercise);
         history.push("/edit-exercise");
     }
 
 
-    // DELETE a exercise  
+    // DELETE an exercise  
     const onDeleteExercise = async _id => {
         const response = await fetch(`/exercises/${_id}`, { method: 'DELETE' });
         if (response.status === 204) {
