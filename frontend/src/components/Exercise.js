@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdDeleteForever, MdEdit } from 'react-icons/md';
+import { RiEdit2Line, RiDeleteBin7Line } from 'react-icons/ri';
 
 function Exercise({ exercise, onEdit, onDelete }) {
     return (
@@ -8,9 +8,9 @@ function Exercise({ exercise, onEdit, onDelete }) {
             <td>{exercise.reps}</td>
             <td>{exercise.weight}</td>
             <td>{exercise.unit}</td>
-            <td>{exercise.date}</td>
-            <td><MdDeleteForever onClick={() => onDelete(exercise._id)} /></td>
-            <td><MdEdit onClick={() => onEdit(exercise)} /></td>
+            <td>{exercise.date.toLocaleString("en-US").slice(0,10)}</td>
+            <td><RiDeleteBin7Line onClick={() => onDelete(exercise._id)} /></td>
+            <td><RiEdit2Line onClick={() => onEdit(exercise)} /></td>
         </tr>
     );
 }
