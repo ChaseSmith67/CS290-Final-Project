@@ -116,11 +116,25 @@ datalist {}
 
 
 /*  ----- Form ----- */
-
+form {
+  font-size: 32px;
+  align-content: center;
+}
+input {
+  font-size: 24px;
+  width: 300px;
+}
 button {
     font-size: larger;
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flexbox;
+    margin: top 10px;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin: top 10px;
 }
 
 

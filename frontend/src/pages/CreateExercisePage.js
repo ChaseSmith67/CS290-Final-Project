@@ -22,8 +22,10 @@ export const CreateExercisePage = () => {
         });
         if(response.status === 201){
             alert("Successfully added the exercise!");
+        } else if(response.status === 400){
+            alert("Invalid request. Please provide all require data.")
         } else {
-            alert(`Failed to add exercise, status code = ${response.status}`);
+            alert(`Something strange happened, status code = ${response.status}`);
         }
         history.push("/");
     };
@@ -54,7 +56,7 @@ export const CreateExercisePage = () => {
                     <input
                         type="number"
                         value={reps}
-                        placeholder="Reps of the exercise performed"
+                        placeholder="Reps performed"
                         onChange={e => setReps(e.target.value)} 
                         id="reps" />
 

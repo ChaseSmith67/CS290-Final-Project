@@ -21,10 +21,10 @@ db.once("open", (err) => {
 // SCHEMA: Define the collection's schema.
 const exerciseSchema = mongoose.Schema({
 	name: { type: String, required: true },
-	reps: { type: Number, required: true },
-    weight: { type: Number, required: true },
+	reps: { type: Number, required: true, min: 0 },
+    weight: { type: Number, required: true, min: 0 },
 	unit: { type: String, required: true },
-    date: { type: Date, required: true}
+    date: { type: Date, required: true, default: Date.now }
 });
 
 // Compile the model from the schema.
