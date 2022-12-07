@@ -14,7 +14,7 @@
 @import url(//fonts.googleapis.com/css?family=Font+Name);
           */
 
-          /* @import '../node_modules/modern-normalize/modern-normalize.css';
+         /* @import '../node_modules/modern-normalize/modern-normalize.css';
           /* npm install modern-normalize 
             Resets elements for browser consistancy.  
             http://nicolasgallagher.com/about-normalize-css/ 
@@ -32,19 +32,72 @@
 
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
-  color:;
-  background-color:lightgrey;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size:;
-  margin:;
-  padding:;
+  color:darkblue;
+  background-color: lightgrey;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em ;
+  font-weight: 500;
+  margin: 50px;
+  padding: 100px;
   text-align: center;
 }
 
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  background-color:rgb(40, 170, 170);
+  color:blue;
+  border:15px double darkblue;
+  font-size: 1.2em; 
+  font-weight:bold; 
+  margin:30px; 
+  padding:25px; 
+  text-decoration:dotted;
+}
+nav a {
+  background-color:rgb(40, 170, 170);
+  color:blue;
+  border:5px solid darkblue;
+  font-size: 1.2em; 
+  font-weight:bold; 
+  margin:30px; 
+  padding:25px; 
+  text-decoration:wavy;
+}
+nav a:hover {
+  background-color:aquamarine;
+  color:rgb(0, 0, 180);
+  border:1px sold black;
+  font-size: 1.3em; 
+  font-weight:bold; 
+  margin:30px; 
+  padding:25px; 
+  text-decoration:underline;
+}
 
 /*  ----- Page layout blocks -----  */
-header {}
-main {}
+header {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  color:darkblue;
+  border: 25px double darkblue;
+  padding: 15px;
+  margin: 20px;
+  background-color: rgb(240, 70, 70);
+}
+main {
+  background-color: antiquewhite;
+  color: rgb(55, 55, 55);
+  border: 5px solid darkblue;
+  padding: 5px;
+}
 section {}
   article {}
     #topic1 {}
@@ -53,10 +106,21 @@ section {}
     #gallery2 {}
 div {}
 aside {}
-footer {}
+footer {
+  margin-top: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  color: rgb(55, 55, 55);
+  font-weight: 200;
+}
 
 /*  -----  Typography  ----- */
-p {}
+p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 50px;
+  margin-right: 5 a 0px;
+}
 br {}
 ol, ul, dl {}
 li {}
@@ -64,52 +128,82 @@ dt {}
 dd {}
 
 h1, h2, h3, h4, h5, h6 {} /* Define consistant font family.*/
-h1 {}
-h2 {}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  color: darkblue;
+}
 h3 {}
 h4 {}
 h5 {}
 h6 {}
 
-cite {}
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {
+    font-family: sans-serif;
+  }
+em {}
+hr {}
+mark {}
+s {}
+span {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+strong {}
+sub {}
+sup {}
+time {}
 
-
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
 
 /*  ----- Table ----- */
 table {
-    text-align: center;
-    margin: auto;
-    border: 2px solid blue;
+  margin: auto;
+  border-collapse: collapse;
+  border: 2px solid darkblue;
 }
 caption {
-    font-size: 1.5em;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: darkblue;
 }
-thead {}
-tbody {
-    border: 3px solid blue;}
+thead {
+  font-size: 1.1em;
+}
+tbody {}
 tfoot {}
 tr {
-    border: 2px solid blue;
+  border: 2px solid darkblue;
+  padding: 10px;
 }
   tr:nth-child(even) {
-    background-color: antiquewhite;
+    background-color: rgb(230,220,200);
   }
 th {
-    border: 2px solid blue;
-    font-size: 1.35em;
-    font-weight: bold;
+  border: 2px solid darkblue;
+  padding: 15px;
 }
 td {
-    font-size: 1.2em;
-    width: 300px;
-    text-align: center;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid darkblue;
 }
-  td:nth-child(1) {
-    padding-left: 55px;
-  }
-  td:nth-child(2) {
-    padding-left: 120px;
-  }
+
 colgroup {}
 data {}
 datalist {}
@@ -117,26 +211,86 @@ datalist {}
 
 /*  ----- Form ----- */
 form {
-  font-size: 32px;
-  align-content: center;
+  color: darkblue;
+  margin-top: 50px;
 }
-input {
-  font-size: 24px;
-  width: 300px;
+fieldset {
+  border: solid rgb(55, 55, 55);
 }
-button {
-    font-size: larger;
-    font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flexbox;
-    margin: top 10px;
-}
+  legend {
+    font-size: 1.4em;
+    font-weight: bolder;
+  }
 label {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 3px;
+  padding-top: 15px;
+  padding-right: 5px;
   display: block;
-  font-weight: 600;
-  margin: top 10px;
 }
+  button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: .9em;
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  input {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 15px;
+    margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
 
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
 
 @keyframes App-logo {}
 

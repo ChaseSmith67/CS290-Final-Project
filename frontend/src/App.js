@@ -22,7 +22,7 @@ function App() {
       <Router>
 
           <header>
-            <h1>Collection of Exercises</h1>
+            <h1>Your Exercise History</h1>
             <p>This app uses MERN.</p>
           </header>
 

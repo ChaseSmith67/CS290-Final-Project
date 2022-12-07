@@ -23,7 +23,11 @@ export const CreateExercisePage = () => {
         if(response.status === 201){
             alert("Successfully added the exercise!");
         } else if(response.status === 400){
-            alert("Invalid request. Please provide all require data.")
+            if(weight < 0 || reps < 0){
+                alert("Invalid request. Negative values are not allowed for weight or reps")
+            } else {
+                alert("Invalid request. Please provide all require data.")
+            }
         } else {
             alert(`Something strange happened, status code = ${response.status}`);
         }
@@ -70,7 +74,7 @@ export const CreateExercisePage = () => {
                     <label for="unit">Unit</label>
                     <input
                         type="text"
-                        placeholder="Primary unit of the exercise"
+                        placeholder="Primary exercise unit"
                         value={unit}
                         onChange={e => setUnit(e.target.value)} 
                         id="unit" />
