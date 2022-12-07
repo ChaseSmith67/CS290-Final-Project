@@ -47,7 +47,7 @@ export const CreateExercisePage = () => {
             </p>
             <form onSubmit={(e) => { e.preventDefault();}}>
                 <fieldset>
-                    <legend>Which exercise are you adding?</legend>
+                    <legend>What exercise would you like to add?</legend>
                     <label for="name">Exercise name</label>
                     <input
                         type="text"
