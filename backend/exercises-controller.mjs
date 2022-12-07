@@ -74,12 +74,12 @@ app.delete('/exercises/:_id', (req, res) => {
             if (deletedCount === 1) {
                 res.status(204).send();
             } else {
-                res.status(404).json({ Error: 'Document not found' });
+                res.status(404).json({ Error: "We can't seem to find what you're looking for." });
             }
         })
         .catch(error => {
             console.error(error);
-            res.send({ error: 'Request to delete a document failed' });
+            res.send({ error: 'Oh no! Something went wrong.' });
         });
 });
 
@@ -105,12 +105,12 @@ app.put('/exercises/:_id', (req, res) => {
                 date: req.body.date
             })
         } else {
-            res.status(404).json({ Error: 'Document not found' });
+            res.status(404).json({ Error: "We can't seem to find what you're looking for." });
         }
     })
     .catch(error => {
         console.error(error);
-        res.status(400).json({ Error: 'Request to update a document failed' });
+        res.status(400).json({ Error: 'Oh no! Something went wrong.' });
     });
 });
 
