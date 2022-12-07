@@ -21,7 +21,7 @@ app.post ('/exercises', (req,res) => {
         })
         .catch(error => {
             console.log(error);
-            res.status(400).json({ error: 'Creation of a document failed due to invalid syntax.' });
+            res.status(400).json({ error: 'Invalid Syntax. Please provide all required data.' });
         });
 });
 
@@ -35,11 +35,11 @@ app.get('/exercises/:_id', (req, res) => {
             if (exercise !== null) {
                 res.json(exercise);
             } else {
-                res.status(404).json({ Error: 'Document not found' });
+                res.status(404).json({ Error: "We can't seem to find what you're looking for." });
             }         
          })
         .catch(error => {
-            res.status(400).json({ Error: 'Request to retrieve document failed' });
+            res.status(400).json({ Error: 'Oh no! Something went wrong.' });
         });
 
 });
@@ -62,7 +62,7 @@ app.get('/exercises', (req, res) => {
         })
         .catch(error => {
             console.error(error);
-            res.send({ Error: 'Request to retrieve documents failed' });
+            res.send({ Error: 'Sorry. Something went wrong. Ensure all provided data is correct and try again.' });
         });
 
 });

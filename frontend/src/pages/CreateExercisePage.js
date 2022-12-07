@@ -87,7 +87,8 @@ export const CreateExercisePage = () => {
                         type="submit"
                         onClick={CreateExercise}
                         id="submit"
-                    >Add</button> to the collection</label>
+                    >Add Exercise</button>
+                    </label>
                 </fieldset>
                 </form>
             </article>
