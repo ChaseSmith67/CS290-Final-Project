@@ -85,7 +85,8 @@ export const EditExercisePage = ({ exercise }) => {
                     <button
                         onClick={editExercise}
                         id="submit"
-                    >Save</button> updates to the collection</label>
+                    >Save Changes</button>
+                    </label>
                 </fieldset>
                 </form>
             </article>
